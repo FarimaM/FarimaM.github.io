@@ -7,42 +7,64 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+<body class="bg-slate-50 text-slate-800 antialiased leading-relaxed">
 
     <!-- Navigation Bar -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-50 transition-all">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="font-bold text-lg text-indigo-700">Farima Moghaddam</a>
-            <div class="space-x-6 text-sm font-medium hidden md:flex">
-                <a href="#about" class="hover:text-indigo-600 transition">About</a>
-                <a href="#experience" class="hover:text-indigo-600 transition">Experience</a>
-                <a href="#publications" class="hover:text-indigo-600 transition">Publications</a>
-                <a href="#certifications" class="hover:text-indigo-600 transition">Certifications</a>
-                <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
+            <a href="#" class="font-bold text-xl text-indigo-700 tracking-tight flex items-center gap-2">
+                <i class="fa-solid fa-brain text-indigo-600"></i> Farima Moghaddam
+            </a>
+            <div class="space-x-8 text-sm font-semibold text-slate-600 hidden md:flex">
+                <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
+                <a href="#experience" class="hover:text-indigo-600 transition-colors">Experience</a>
+                <a href="#publications" class="hover:text-indigo-600 transition-colors">Publications</a>
+                <a href="#certifications" class="hover:text-indigo-600 transition-colors">Certifications</a>
+                <a href="#skills" class="hover:text-indigo-600 transition-colors">Skills</a>
             </div>
         </div>
     </nav>
 
-    <!-- Header / Hero Section with Profile Picture -->
-    <header class="bg-white border-b border-slate-100 py-16">
+    <!-- Header / Hero Section -->
+    <header class="bg-white border-b border-slate-200/60 py-16 md:py-20">
         <div class="max-w-5xl mx-auto px-6 text-center md:text-left flex flex-col md:flex-row items-center gap-10">
             
             <!-- Profile Photo -->
-            <div class="flex-shrink-0">
-                <img src="lab pic.jpg" alt="Farima Moghaddam" class="w-44 h-44 rounded-full object-cover shadow-md border-4 border-white ring-2 ring-indigo-100">
+            <div class="flex-shrink-0 relative">
+                <img src="lab pic.jpg" alt="Farima Moghaddam" class="w-48 h-48 rounded-2xl object-cover shadow-xl border-4 border-white ring-1 ring-slate-200">
+                <span class="absolute bottom-2 right-2 bg-emerald-500 w-4 h-4 rounded-full ring-4 ring-white" title="Active Research"></span>
             </div>
 
             <!-- Profile Info -->
             <div class="flex-1">
-                <h1 class="text-4xl font-extrabold text-slate-900 mb-2">Farima Moghaddam</h1>
-                <p class="text-xl text-indigo-600 font-medium mb-4">Research Assistant | Computational Neuroscientist</p>
-                <p class="text-slate-600 mb-6">Computational NeuroCognitive Laboratory (CNLab), Department of Biomedical Engineering, Sahand University of Technology, Tabriz, Iran.</p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
-                    <a href="mailto:f_moghaddam97@sut.ac.ir" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-lg font-medium hover:bg-indigo-100 transition"><i class="fa-solid fa-envelope mr-2"></i>Email</a>
-                    <a href="https://github.com/FarimaM" target="_blank" class="bg-slate-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-slate-800 transition"><i class="fa-brands fa-github mr-2"></i>GitHub</a>
-                    <a href="#" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition"><i class="fa-brands fa-linkedin mr-2"></i>LinkedIn</a>
-                    <a href="#" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition"><i class="fa-solid fa-graduation-cap mr-2"></i>Google Scholar</a>
+                <div class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-semibold tracking-wide uppercase mb-3">
+                    Research Assistant & Computational Neuroscientist
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-2">Farima Moghaddam</h1>
+                <p class="text-base text-slate-600 mb-6 font-normal">
+                    <i class="fa-solid fa-building-columns mr-1.5 text-slate-400"></i> Computational NeuroCognitive Laboratory (CNLab), Department of Biomedical Engineering, Sahand University of Technology, Tabriz, Iran.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-3 text-sm">
+                    <a href="mailto:f_moghaddam97@sut.ac.ir" class="bg-indigo-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition-all shadow-sm shadow-indigo-200 flex items-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+                    <a href="https://github.com/FarimaM" target="_blank" class="bg-slate-900 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-slate-800 transition-all shadow-sm flex items-center gap-2">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="#" target="_blank" class="bg-blue-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-all shadow-sm flex items-center gap-2">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="#" target="_blank" class="bg-emerald-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-emerald-700 transition-all shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+                    </a>
                 </div>
             </div>
 
@@ -51,22 +73,38 @@
 
     <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
 
-        <!-- Research Interests -->
+        <!-- Research Interests & Core Vision -->
         <section id="about">
-            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Research Interests</h2>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-lightbulb text-indigo-600"></i> Research Interests & Vision
+            </h2>
+            
+            <!-- Research Statement Box -->
+            <div class="bg-gradient-to-r from-indigo-900 to-slate-900 text-white p-8 rounded-2xl shadow-lg mb-8 relative overflow-hidden">
+                <div class="relative z-10 space-y-4">
+                    <p class="text-indigo-100 text-base md:text-lg leading-relaxed font-normal">
+                       My work links model-based signal processing in <strong>Systems Neuroscience</strong>, <strong>Cognitive & Behavioral Neuroscience</strong>, and <strong>Clinical & Translational Neuroscience</strong> with machine learning—predictive modeling, neural decoding, and graph neural networks.
+                    </p>
+                    <p class="text-slate-300 text-sm md:text-base leading-relaxed border-l-2 border-indigo-400 pl-4 italic">
+                        "I answer two basic concerns by identifying patterns in multimodal neuroimaging and electrophysiological datasets: How do intricate brain networks combine data to produce adaptive behavior? In order to understand and forecast biological brain dynamics, how can we develop coherent computational models?"
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pillars -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
-                    <ul class="space-y-2 text-slate-700">
-                        <li><i class="fa-solid fa-brain text-indigo-600 mr-2"></i> Neural Data Analysis & Machine Learning[span_0](start_span)[span_0](end_span)</li>
-                        <li><i class="fa-solid fa-bolt text-indigo-600 mr-2"></i> Neuroelectrophysiology[span_1](start_span)[span_1](end_span)</li>
-                        <li><i class="fa-solid fa-network-wired text-indigo-600 mr-2"></i> Neuroimaging[span_2](start_span)[span_2](end_span)</li>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
+                    <ul class="space-y-3 text-slate-700 font-medium">
+                        <li class="flex items-center gap-3"><span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><i class="fa-solid fa-brain"></i></span> Neural Data Analysis & Machine Learning</li>
+                        <li class="flex items-center gap-3"><span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><i class="fa-solid fa-bolt"></i></span> Neuroelectrophysiology[span_0](start_span)[span_0](end_span)</li>
+                        <li class="flex items-center gap-3"><span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><i class="fa-solid fa-network-wired"></i></span> Multimodal Neuroimaging</li>
                     </ul>
                 </div>
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
-                    <ul class="space-y-2 text-slate-700">
-                        <li><i class="fa-solid fa-microchip text-indigo-600 mr-2"></i> Biomedical Signals & Image Processing[span_3](start_span)[span_3](end_span)</li>
-                        <li><i class="fa-solid fa-chart-line text-indigo-600 mr-2"></i> Computational Modeling[span_4](start_span)[span_4](end_span)</li>
-                        <li><i class="fa-solid fa-project-diagram text-indigo-600 mr-2"></i> Systems Neuroscience[span_5](start_span)[span_5](end_span)</li>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
+                    <ul class="space-y-3 text-slate-700 font-medium">
+                        <li class="flex items-center gap-3"><span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><i class="fa-solid fa-microchip"></i></span> Biomedical Signal Processing</li>
+                        <li class="flex items-center gap-3"><span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><i class="fa-solid fa-chart-line"></i></span> Computational & Dynamical Modeling</li>
+                        <li class="flex items-center gap-3"><span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><i class="fa-solid fa-project-diagram"></i></span> Systems & Cognitive Neuroscience</li>
                     </ul>
                 </div>
             </div>
@@ -74,44 +112,46 @@
 
         <!-- Experience & Projects -->
         <section id="experience">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2">Research Projects & Experience</h2>
-            <div class="space-y-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-flask text-indigo-600"></i> Research Projects & Experience
+            </h2>
+            <div class="space-y-6">
                 <!-- Project 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <div class="bg-white p-7 rounded-xl shadow-sm border border-slate-200/80 hover:border-indigo-200 transition-all">
                     <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
                         <h3 class="text-lg font-bold text-slate-900">Latent Mean-Covariance Modeling for Strategic Foraging</h3>
-                        <span class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">Winter 2026 - Present[span_6](start_span)[span_6](end_span)</span>
+                        <span class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-semibold">Winter 2026 - Present</span>
                     </div>
-                    <p class="text-sm text-indigo-600 font-medium mb-3">Research Collaborator | Interdisciplinary Schools - Tehran, Iran (Supervisor: Dr. Neda Shahidi, University of Göttingen)[span_7](start_span)[span_7](end_span)</p>
-                    <ul class="list-disc list-inside space-y-1 text-slate-600 text-sm">
-                        <li>Developed a computational framework integrating Transformer-based conditional mean modeling with low-rank latent covariance estimation to characterize time-varying population dynamics and noise correlations in macaque dorsolateral prefrontal cortex (dlPFC)[span_8](start_span)[span_8](end_span).</li>
-                        <li>Applied permutation-based SHAP feature attribution and null-standardized selectivity analysis to disentangle behavioral and spatial tuning across neuronal populations[span_9](start_span)[span_9](end_span).</li>
+                    <p class="text-sm text-indigo-600 font-medium mb-3">Research Collaborator | Interdisciplinary Schools - Tehran, Iran (Supervisor: Dr. Neda Shahidi, University of Göttingen)</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Developed a computational framework integrating Transformer-based conditional mean modeling with low-rank latent covariance estimation to characterize time-varying population dynamics and noise correlations in macaque dorsolateral prefrontal cortex (dlPFC).</li>
+                        <li>Applied permutation-based SHAP feature attribution and null-standardized selectivity analysis to disentangle behavioral and spatial tuning across neuronal populations.</li>
                     </ul>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <div class="bg-white p-7 rounded-xl shadow-sm border border-slate-200/80 hover:border-indigo-200 transition-all">
                     <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
                         <h3 class="text-lg font-bold text-slate-900">Multilayer Modeling of Alzheimer's Disease Progression</h3>
-                        <span class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">Summer 2024 - Fall 2026[span_10](start_span)[span_10](end_span)</span>
+                        <span class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-semibold">Summer 2024 - Fall 2026</span>
                     </div>
-                    <p class="text-sm text-indigo-600 font-medium mb-3">Research Collaborator (Collaborator: Sobhan Khodadadi, University of Cambridge)[span_11](start_span)[span_11](end_span)</p>
-                    <ul class="list-disc list-inside space-y-1 text-slate-600 text-sm">
-                        <li>Constructed multilayer functional brain networks and evaluated graph-theoretic properties across 15 connectivity methods using data from 201 participants in the ADNI dataset[span_12](start_span)[span_12](end_span).</li>
-                        <li>Performed SHAP-based feature attribution, identifying partial-correlation-based connectivity features as prominent predictors[span_13](start_span)[span_13](end_span).</li>
+                    <p class="text-sm text-indigo-600 font-medium mb-3">Research Collaborator (Collaborator: Sobhan Khodadadi, University of Cambridge)</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Constructed multilayer functional brain networks and evaluated graph-theoretic properties across 15 connectivity methods using data from 201 participants in the ADNI dataset.</li>
+                        <li>Performed SHAP-based feature attribution, identifying partial-correlation-based connectivity features as prominent predictors.</li>
                     </ul>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <div class="bg-white p-7 rounded-xl shadow-sm border border-slate-200/80 hover:border-indigo-200 transition-all">
                     <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
                         <h3 class="text-lg font-bold text-slate-900">Connectivity Analysis of Brain Regions for ADHD Diagnosis</h3>
-                        <span class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-medium">Winter 2019 - Summer 2023[span_14](start_span)[span_14](end_span)</span>
+                        <span class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-semibold">Winter 2019 - Summer 2023</span>
                     </div>
-                    <p class="text-sm text-indigo-600 font-medium mb-3">Research Assistant | Cognitive Neuroscience Laboratory (Supervisors: Prof. Peyvand Ghaderyan, Prof. Mousa Shamsi)[span_15](start_span)[span_15](end_span)</p>
-                    <ul class="list-disc list-inside space-y-1 text-slate-600 text-sm">
-                        <li>Developed an EEG interdependence-based connectivity feature integrated with a sparse-coding classifier for automated ADHD detection, achieving 99.17% accuracy[span_16](start_span)[span_16](end_span).</li>
-                        <li>Funded by the Cognitive Sciences and Technologies Council (CSTC), Tehran, Iran[span_17](start_span)[span_17](end_span).</li>
+                    <p class="text-sm text-indigo-600 font-medium mb-3">Research Assistant | Cognitive Neuroscience Laboratory (Supervisors: Prof. Peyvand Ghaderyan, Prof. Mousa Shamsi)</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Developed an EEG interdependence-based connectivity feature integrated with a sparse-coding classifier for automated ADHD detection, achieving 99.17% accuracy.</li>
+                        <li>Funded by the Cognitive Sciences and Technologies Council (CSTC), Tehran, Iran.</li>
                     </ul>
                 </div>
             </div>
@@ -119,64 +159,99 @@
 
         <!-- Publications -->
         <section id="publications">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2">Publications</h2>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-4 text-sm text-slate-700">
-                <ol class="list-decimal list-inside space-y-3">
-                    <li>Sobhan Khodadadi Arpanahi, Moloud Sarrami, <b>Farima Moghaddam</b>, Reyhaneh Abedi, Marjan Rajabi, Zahra Rahimian, Samaneh Talebi*. "An explainable multilayer connectome framework for staging and progression in Alzheimer's disease." <i>BMC Medical Informatics and Decision Making - Springer Nature</i>. (Under Review)[span_18](start_span)[span_18](end_span)</li>
-                    <li><b>Farima Moghaddam</b>, Peyvand Ghaderyan*, Mousa Shamsi. "Diagnosis of Attention Deficit/Hyperactivity Disorder using the analysis of different brain regions' connectivity and the Dynamic Time Warping method." <i>Tabriz Journal of Electrical Engineering</i>. doi: 10.22034/tjee.2023.16304[span_19](start_span)[span_19](end_span)</li>
-                    <li>Peyvand Ghaderyan*, <b>Farima Moghaddam</b>, Shiva Khoshnoud, and Mousa Shamsi. "New interdependence feature of EEG signals as a biomarker of timing deficits evaluated in attention-deficit/hyperactivity disorder detection." <i>Measurement 199 Elsevier</i>. doi: 10.1016/j.measurement.2022.111468[span_20](start_span)[span_20](end_span)</li>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-book-open text-indigo-600"></i> Publications
+            </h2>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 space-y-4 text-sm text-slate-700">
+                <ol class="space-y-4">
+                    <li class="pb-3 border-b border-slate-100 last:border-0 last:pb-0">
+                        <span class="font-semibold text-slate-900">1.</span> Sobhan Khodadadi Arpanahi, Moloud Sarrami, <b>Farima Moghaddam</b>, Reyhaneh Abedi, Marjan Rajabi, Zahra Rahimian, Samaneh Talebi*. "An explainable multilayer connectome framework for staging and progression in Alzheimer's disease." <i>BMC Medical Informatics and Decision Making - Springer Nature</i>. (Under Review)
+                    </li>
+                    <li class="pb-3 border-b border-slate-100 last:border-0 last:pb-0">
+                        <span class="font-semibold text-slate-900">2.</span> <b>Farima Moghaddam</b>, Peyvand Ghaderyan*, Mousa Shamsi. "Diagnosis of Attention Deficit/Hyperactivity Disorder using the analysis of different brain regions' connectivity and the Dynamic Time Warping method." <i>Tabriz Journal of Electrical Engineering</i>. doi: 10.22034/tjee.2023.16304
+                    </li>
+                    <li class="pb-0">
+                        <span class="font-semibold text-slate-900">3.</span> Peyvand Ghaderyan*, <b>Farima Moghaddam</b>, Shiva Khoshnoud, and Mousa Shamsi. "New interdependence feature of EEG signals as a biomarker of timing deficits evaluated in attention-deficit/hyperactivity disorder detection." <i>Measurement 199 Elsevier</i>. doi: 10.1016/j.measurement.2022.111468
+                    </li>
                 </ol>
             </div>
         </section>
 
         <!-- Selected Certifications & Training -->
         <section id="certifications">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b pb-2">Selected Certifications & Training</h2>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-award text-indigo-600"></i> Selected Certifications & Training
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 flex flex-col justify-between">
                     <div>
-                        <h3 class="font-bold text-slate-900">Neuromatch Academy - Computational Neuroscience</h3>
-                        <p class="text-xs text-slate-500 mb-2">Summer 2024[span_21](start_span)[span_21](end_span)</p>
-                        <p class="text-sm text-slate-600 mb-4">Project: gradient analysis of Human Connectome Project (HCP) fMRI data to characterize cortical functional connectivity during working-memory tasks[span_22](start_span)[span_22](end_span).</p>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="font-bold text-slate-900">Neuromatch Academy</h3>
+                            <span class="text-xs text-slate-400">Summer 2024</span>
+                        </div>
+                        <p class="text-xs text-indigo-600 font-medium mb-2">Computational Neuroscience</p>
+                        <p class="text-sm text-slate-600 mb-4">Gradient analysis of Human Connectome Project (HCP) fMRI data to characterize cortical functional connectivity during working-memory tasks.</p>
                     </div>
-                    <a href="https://portal.neuromatchacademy.org/certificate/dbfee994-eb23-427f-8bc1-f47d1957d2b1" target="_blank" class="text-indigo-600 text-sm font-medium hover:underline"><i class="fa-solid fa-certificate mr-1"></i> View Certificate</a>
+                    <a href="https://portal.neuromatchacademy.org/certificate/dbfee994-eb23-427f-8bc1-f47d1957d2b1" target="_blank" class="text-indigo-600 text-sm font-semibold hover:underline inline-flex items-center gap-1">
+                        <i class="fa-solid fa-certificate"></i> View Certificate
+                    </a>
                 </div>
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between">
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 flex flex-col justify-between">
                     <div>
-                        <h3 class="font-bold text-slate-900">Machine Learning Specialization</h3>
-                        <p class="text-xs text-slate-500 mb-2">DeepLearning.AI & Stanford Online | August 2023[span_23](start_span)[span_23](end_span)</p>
-                        <p class="text-sm text-slate-600 mb-4">Supervised Machine Learning, Advanced Learning Algorithms, and Unsupervised Learning/Reinforcement Learning[span_24](start_span)[span_24](end_span).</p>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="font-bold text-slate-900">Machine Learning Specialization</h3>
+                            <span class="text-xs text-slate-400">Aug 2023</span>
+                        </div>
+                        <p class="text-xs text-indigo-600 font-medium mb-2">DeepLearning.AI & Stanford Online</p>
+                        <p class="text-sm text-slate-600 mb-4">Supervised Machine Learning, Advanced Learning Algorithms, Unsupervised Learning, and Reinforcement Learning.</p>
                     </div>
-                    <a href="https://coursera.org/verify/specialization/2X6SNPNQ235J" target="_blank" class="text-indigo-600 text-sm font-medium hover:underline"><i class="fa-solid fa-certificate mr-1"></i> View Certificate</a>
+                    <a href="https://coursera.org/verify/specialization/2X6SNPNQ235J" target="_blank" class="text-indigo-600 text-sm font-semibold hover:underline inline-flex items-center gap-1">
+                        <i class="fa-solid fa-certificate"></i> View Certificate
+                    </a>
                 </div>
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
-                    <h3 class="font-bold text-slate-900">Advanced Analysis of EEG and ERP Signals</h3>
-                    <p class="text-xs text-slate-500 mb-1">National Brain Mapping Lab (NBML) | Summer 2026[span_25](start_span)[span_25](end_span)</p>
-                    <p class="text-sm text-slate-600">Time-Frequency Approaches, Nonlinear-Dynamics-Based Indices, and Graph Theory[span_26](start_span)[span_26](end_span).</p>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
+                    <div class="flex justify-between items-start mb-1">
+                        <h3 class="font-bold text-slate-900">Advanced Analysis of EEG & ERP Signals</h3>
+                        <span class="text-xs text-slate-400">Summer 2026</span>
+                    </div>
+                    <p class="text-xs text-indigo-600 font-medium mb-2">National Brain Mapping Lab (NBML)</p>
+                    <p class="text-sm text-slate-600">Time-Frequency Approaches, Nonlinear-Dynamics-Based Indices, and Graph Theory.</p>
                 </div>
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
-                    <h3 class="font-bold text-slate-900">Neuroscience Diploma</h3>
-                    <p class="text-xs text-slate-500 mb-1">GABA Neuroscience Association | Winter 2024[span_27](start_span)[span_27](end_span)</p>
-                    <p class="text-sm text-slate-600">Based on Kandel et al., Principles of Neural Science[span_28](start_span)[span_28](end_span).</p>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80">
+                    <div class="flex justify-between items-start mb-1">
+                        <h3 class="font-bold text-slate-900">Neuroscience Diploma</h3>
+                        <span class="text-xs text-slate-400">Winter 2024</span>
+                    </div>
+                    <p class="text-xs text-indigo-600 font-medium mb-2">GABA Neuroscience Association</p>
+                    <p class="text-sm text-slate-600">Comprehensive study based on Kandel et al., <i>Principles of Neural Science</i>.</p>
                 </div>
             </div>
         </section>
 
         <!-- Technical Skills -->
-        <section id="skills" class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b pb-2">Technical Skills</h2>
-            <div class="space-y-4 text-sm text-slate-700">
-                <div>
-                    <span class="font-semibold text-slate-900">Programming & Data Science:</span> Python (PyTorch, BrainGB, TensorFlow, Scikit-Learn, Statsmodels, NumPy, Pandas, Matplotlib, Seaborn), MATLAB, R, C/C++[span_29](start_span)[span_29](end_span)
+        <section id="skills" class="bg-white p-7 rounded-xl shadow-sm border border-slate-200/80">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-code text-indigo-600"></i> Technical Skills
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="space-y-1">
+                    <h3 class="font-semibold text-slate-900 border-b pb-1 mb-2">Programming & Frameworks</h3>
+                    <p class="text-slate-600 leading-relaxed">Python (PyTorch, BrainGB, PyTorch Geometric, Scikit-Learn, Statsmodels, NumPy, Pandas, Matplotlib, Seaborn), MATLAB, R, C/C++</p>
                 </div>
-                <div>
-                    <span class="font-semibold text-slate-900">Analysis Software & Toolboxes:</span> MNE-Python, EEGLAB, ERPLAB, FieldTrip, SPM12, FSL, FreeSurfer, Nilearn, CONN, DPABI[span_30](start_span)[span_30](end_span)
+                <div class="space-y-1">
+                    <h3 class="font-semibold text-slate-900 border-b pb-1 mb-2">Analysis Toolboxes</h3>
+                    <p class="text-slate-600 leading-relaxed">EEGLAB, ERPLAB, FieldTrip, MNE-Python, SPM12, FSL, FreeSurfer, CONN, DPABI, Nilearn</p>
                 </div>
-                <div>
-                    <span class="font-semibold text-slate-900">Hardware & Acquisition Systems:</span> EEG (Encephalan-09), Structural MRI (Siemens Prisma 3T), fMRI/MR-Compatible Systems (BrainAmp MR), Diffusion & Perfusion MRI[span_31](start_span)[span_31](end_span)
+                <div class="space-y-1">
+                    <h3 class="font-semibold text-slate-900 border-b pb-1 mb-2">Acquisition & Hardware Systems</h3>
+                    <p class="text-slate-600 leading-relaxed">EEG (Encephalan-09), Siemens Prisma 3T MRI, fMRI (BrainAmp MR), Diffusion & Perfusion MRI</p>
                 </div>
-                <div>
-                    <span class="font-semibold text-slate-900">Tools:</span> Git, Linux/Unix Environments, Jupyter, VS Code, Anaconda[span_32](start_span)[span_32](end_span)
+                <div class="space-y-1">
+                    <h3 class="font-semibold text-slate-900 border-b pb-1 mb-2">Developer Tools & Environments</h3>
+                    <p class="text-slate-600 leading-relaxed">Git, Unix/Linux Environments, VS Code, Cursor AI, Jupyter Notebooks, Bash/Shell</p>
                 </div>
             </div>
         </section>
@@ -184,7 +259,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-100 mt-20 py-8 text-center text-sm text-slate-500">
+    <footer class="bg-white border-t border-slate-200/80 mt-20 py-8 text-center text-sm text-slate-500">
         <p>&copy; 2026 Farima Moghaddam. All rights reserved.</p>
     </footer>
 
